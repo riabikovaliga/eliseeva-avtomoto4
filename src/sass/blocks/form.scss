@@ -1,0 +1,112 @@
+.form {
+  display: grid;
+  grid-template-areas:
+    "author rating"
+    "advantages comment"
+    "disadvantages comment"
+    "submit submit";
+  row-gap: 14px;
+  column-gap: 28px;
+}
+
+.form__input {
+  position: relative;
+
+  width: 300px;
+  height: 50px;
+  padding-top: 15px;
+  padding-right: 25px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  border: 1px solid var(--extra-light-decorative);
+
+  &:hover {
+    border: 1px solid var(--contrast);
+  }
+
+  &--author {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: 0;
+  
+      width: 8px;
+      height: 21px;
+
+      background-image: url("../../img/icon-asterisk.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--rating {
+    grid-area: rating;
+  }
+
+  &--advantages {
+    grid-area: advantages;
+  }
+
+  &--disadvantages {
+    grid-area: disadvantages;
+    margin-bottom: 15px;
+  }
+
+  &--comment {
+    height: 118px;
+
+    resize: none;
+  }
+
+  &--error {
+    position: absolute;
+    top: -24px;
+    left: 2px;
+
+    font-size: 14px;
+    color: var(--warning)
+  }
+
+  &--invalid {
+    border: 1px solid var(--warning);
+  }
+}
+
+.form__required-wrapper {
+  position: relative;
+
+  &--author {
+    grid-area: author;
+
+    &::before {
+      @include asterisk;
+    }
+  }
+
+  &--comment {
+    grid-area: comment;
+    margin-bottom: 15px;
+
+    &::before {
+      @include asterisk;
+    }
+  }
+}
+
+.form__submit {
+  @include button-contrast;
+
+  grid-area: submit;
+  justify-self: center;
+
+  padding-top: 17px;
+  padding-right: 21px;
+  padding-bottom: 16px;
+  padding-left: 21px;
+}

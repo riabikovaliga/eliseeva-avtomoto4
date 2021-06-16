@@ -1,0 +1,62 @@
+.review-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-text__heading {
+  position: relative;
+  margin: 0;
+  margin-bottom: 2px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  &--advantages {
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0;
+  
+      width: 9px;
+      height: 21px;
+  
+      background-image: url("../../img/icon-plus.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--disadvantages {
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: 0;
+  
+      width: 8px;
+      height: 21px;
+  
+      background-image: url("../../img/icon-minus.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.review-text__text {
+  margin: 0;
+
+  font-size: 15px;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &--advantages,
+  &--disadvantages {
+    padding-left: 20px;
+  }
+}

@@ -1,0 +1,76 @@
+.review {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-areas: 
+  "author author"
+  "text text"
+  "rating recommends"
+  "date reply";
+  column-gap: 23px;
+  
+  padding-bottom: 20px;
+
+  border-bottom: 0.5px solid var(--extra-light-decorative);
+}
+
+.review:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.review__author {
+  grid-area: author;
+
+  margin: 0;
+  margin-bottom: 14px;
+
+  font-size: 20px;
+  font-weight: 600;
+
+}
+
+.review__text {
+  grid-area: text;
+
+  margin-bottom: 18px;
+}
+
+.review__rating {
+  grid-area: rating;
+}
+
+.review__recommends {
+  grid-area: recommends;
+  margin: 0;
+
+  font-size: 15px;
+  color: var(--contrast);
+}
+
+.review__date {
+  grid-area: date;
+
+  margin: 0;
+  
+  font-size: 14px;
+  color: var(--extra-light-decorative)
+}
+
+.review__reply {
+  grid-area: reply;
+  justify-self: start;
+
+  padding: 0;
+  padding-left: 6px;
+
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--contrast);
+
+  background-color: transparent;
+
+  border: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

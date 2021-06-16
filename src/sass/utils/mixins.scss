@@ -1,0 +1,91 @@
+@mixin container {
+  width: 1169px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (max-width: 1208px) {
+    width: 100%;
+  }
+}
+
+@mixin reset-list-style {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+@mixin reset-link-style {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin button {
+  padding-top: 15px;
+  padding-right: 17px;
+  padding-bottom: 16px;
+  padding-left: 19px;
+
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--contrast);
+  letter-spacing: 0.12em;
+
+  background-color: var(--basic);
+
+  border: 1px solid var(--contrast);
+
+  cursor: pointer;
+
+  &:hover {
+    color: var(--basic);
+
+    background-color: var(--contrast);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+@mixin button-contrast {
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  padding-left: 17px;
+
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--basic);
+  letter-spacing: 0.12em;
+
+  background-color: var(--contrast);
+
+  border: 1px solid var(--contrast);
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--dark-contrast);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+@mixin asterisk {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 12px;
+
+  width: 8px;
+  height: 21px;
+
+  background-image: url("../../img/icon-asterisk.svg");
+  background-repeat: no-repeat;
+
+  z-index: 1;
+}

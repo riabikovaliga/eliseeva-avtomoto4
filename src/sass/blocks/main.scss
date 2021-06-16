@@ -1,0 +1,25 @@
+.main {
+  @include container;
+
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-areas: 
+    "slider short-info"
+    "detailed-info detailed-info";
+  row-gap: 85px;
+  column-gap: 58px;
+
+  margin-bottom: 140px;
+}
+
+.main__slider {
+  grid-area: slider;
+}
+
+.main__short-info {
+  grid-area: short-info;
+}
+
+.main__detailed-info {
+  grid-area: detailed-info;
+}

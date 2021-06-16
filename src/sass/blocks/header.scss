@@ -1,0 +1,20 @@
+.header {
+  margin-bottom: 85px;
+  padding-top: 15px;
+  padding-left: 14px;
+  padding-bottom: 14px;
+
+  background-color: var(--light-contrast);
+}
+
+.header__logo {
+  margin-right: 69px;
+}
+
+.header__container {
+  @include container;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

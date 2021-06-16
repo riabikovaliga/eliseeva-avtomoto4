@@ -1,0 +1,32 @@
+.navigation__list {
+  @include reset-list-style;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.navigation__element {
+  &--header:not(:last-child) {
+    margin-right: 69px;
+  }
+
+  &--footer:not(:last-child) {
+    margin-right: 66px;
+  }
+}
+
+.navigation__link {
+  @include reset-link-style;
+  
+  font-weight: 600;
+
+  &:hover {
+    color: var(--contrast);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

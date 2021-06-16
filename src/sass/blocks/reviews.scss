@@ -1,0 +1,17 @@
+.reviews {
+  position: relative;
+  
+  padding-top: 23px;
+}
+
+.reviews__list {
+  @include reset-list-style;
+}
+
+.reviews__add-review {
+  @include button;
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+}

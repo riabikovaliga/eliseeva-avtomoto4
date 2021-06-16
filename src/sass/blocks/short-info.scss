@@ -1,0 +1,30 @@
+.short-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.short-info__heading {
+  min-width: max-content;
+  margin: 0;
+  margin-bottom: 69px;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.short-info__price {
+  margin-bottom: 50px;
+}
+
+.short-info__request {
+  @include button-contrast;
+  
+  margin-bottom: 16px;
+}
+
+.short-info__loan {
+  @include button;
+
+  min-width: max-content;
+}
